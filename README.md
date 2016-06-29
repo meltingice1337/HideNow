@@ -1,6 +1,6 @@
 # HideNow
 
-**Free, Open-Source tool for hiding windows**
+**Free, Open-Source tool for hiding windows using your webcam**
 
 HideNow is a tool that will automatically minimize and rename the window you select when your webcam detects any type of movement.
 
