@@ -16,3 +16,13 @@ C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Release\Hide
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Release\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Release\HideNow.Forms.FrmMain.resources
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Release\HideNow.Aforge.Video.DirectShow.Properties.Resources.resources
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\bin\Release\HideNow.exe
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\bin\Release\HideNow.pdb
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csprojResolveAssemblyReference.cache
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Aforge.Video.DirectShow.Properties.Resources.resources
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Forms.FrmMain.resources
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Properties.Resources.resources
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csproj.GenerateResource.Cache
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.exe
+C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.pdb
