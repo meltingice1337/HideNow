@@ -7,7 +7,7 @@ namespace HideNow.Core
     {
         public static string[] GetWebcamNames()
         {
-            List<string> result = new List<string>();
+            var result = new List<string>();
             var VideoCaptureDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             foreach (FilterInfo VideoCaptureDevice in VideoCaptureDevices)
             {

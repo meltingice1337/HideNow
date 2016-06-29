@@ -87,7 +87,7 @@ namespace HideNow.Forms
 
         private void FillWebcams()
         {
-            var webcamNames = WebcamHandler.GetWebcamNames();
+            string[] webcamNames = WebcamHandler.GetWebcamNames();
             cboxWebcams.Items.AddRange(webcamNames);
             if (cboxWebcams.Items.Count > 0)
                 cboxWebcams.SelectedIndex = 0;

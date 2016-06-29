@@ -13,7 +13,7 @@ namespace HideNow.Core
         public static Window[] GetWindows()
         {
             var result = new List<Window>();
-            var shellWindow = NativeMethods.GetShellWindow();
+            IntPtr shellWindow = NativeMethods.GetShellWindow();
 
             NativeMethods.EnumWindows(delegate (IntPtr hWnd, int lParam)
             {
