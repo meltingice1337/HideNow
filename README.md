@@ -12,6 +12,12 @@ Screenshots
 ---
 ![alt text](http://i.imgur.com/u42MnUu.png "HideNow")
 
+Donations
+---
+BTC: 1Gmes6qfQY3HLx8bHcp34ooYRhGseJ2dYd
+PayPal: dariuscostolas@yahoo.com
+
+
 Contributing
 ---
 See [CONTRIBUTING.md](/CONTRIBUTING.md)
