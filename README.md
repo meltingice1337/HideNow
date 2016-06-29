@@ -8,9 +8,17 @@ Requirements
 ---
 * .NET Framework 2.0 Client Profile ([Download](https://www.microsoft.com/en-us/download/details.aspx?id=16614))
 
-Screenshot
+Screenshots
 ---
 ![alt text](http://i.imgur.com/u42MnUu.png "HideNow")
+
+Contributing
+---
+See [CONTRIBUTING.md](/CONTRIBUTING.md)
+
+License
+---
+See [LICENSE.md](/LICENSE.md)
 
 Credits
 ---
