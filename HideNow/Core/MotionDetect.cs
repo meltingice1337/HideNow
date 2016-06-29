@@ -31,7 +31,8 @@ namespace HideNow.Core
 
         public void Start()
         {
-            FinalVideo.Start();
+            if (!FinalVideo.IsRunning)
+                FinalVideo.Start();
         }
 
         public void Stop()
