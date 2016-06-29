@@ -1,0 +1,13 @@
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.csprojResolveAssemblyReference.cache
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.Properties.Resources.resources
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.Cache
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\bin\Debug\HideNow.exe
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\bin\Debug\HideNow.pdb
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.exe
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.pdb
+C:\Users\MeltingICE\Google Drive\C# Projects\HideNow\HideNow\obj\Debug\HideNow.mainForm.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.Aforge.Video.DirectShow.Properties.Resources.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.mainForm.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.Properties.Resources.resources
+C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.Cache
