@@ -23,5 +23,12 @@ See [LICENSE.md](/LICENSE.md)
 Credits
 ---
 Aforge
+
 Copyright (c) AForge.NET © 2008-2012 
+
 http://www.aforgenet.com/
+
+Quasar
+
+https://github.com/quasar/QuasarRAT
+
