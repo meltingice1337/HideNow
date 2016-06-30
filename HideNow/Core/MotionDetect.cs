@@ -26,7 +26,7 @@ namespace HideNow.Core
         private void FinalVideo_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
             if (Detector.ProcessFrame((Bitmap)eventArgs.Frame.Clone()) > 0.02)
-                MotionDetected();
+                MotionDetected?.Invoke();
         }
 
         public void Start()
