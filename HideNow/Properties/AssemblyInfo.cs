@@ -9,9 +9,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("HideNow")]
 [assembly: AssemblyDescription("Hide any window using your webcam")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Darius Costolas")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("HideNow.Properties")]
-[assembly: AssemblyCopyright("Copyright ©  2016")]
+[assembly: AssemblyCopyright("Copyright © Darius Costolas 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
