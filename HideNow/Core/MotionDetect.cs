@@ -7,6 +7,7 @@ namespace HideNow.Core
 {
     class MotionDetect
     {
+        public double DetectionThreshold = 0.02;
         public delegate void MotionDetectedHandler();
         public event MotionDetectedHandler MotionDetected;
 
@@ -25,7 +26,7 @@ namespace HideNow.Core
 
         private void FinalVideo_NewFrame(object sender, NewFrameEventArgs eventArgs)
         {
-            if (Detector.ProcessFrame((Bitmap)eventArgs.Frame.Clone()) > 0.02)
+            if (Detector.ProcessFrame((Bitmap)eventArgs.Frame.Clone()) > DetectionThreshold)
                 MotionDetected?.Invoke();
         }
 
