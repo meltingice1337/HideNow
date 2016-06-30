@@ -10,7 +10,7 @@ Let's say your mom thinks you are studying but in fact you are watching a movie 
 
 Download
 ----
-[Download version 1.0](https://github.com/meltingice1337/HideNow/releases/download/1.0/HideNow.exe)
+[Download version 1.0 (Windows x86)](https://github.com/meltingice1337/HideNow/releases/download/1.0/HideNow.exe)
 
 Screenshots
 ---
