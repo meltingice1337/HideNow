@@ -8,9 +8,9 @@ Why would i need this ?
 ---
 Let's say your mom thinks you are studying but in fact you are watching a movie on vlc. You don't want to get caught. You point your webcam in the direction your mom would come and start the app. When it detects any movement, the window you choose will hide itself. Nice huh ?
 
-Download
+Binaries
 ----
-Version 1.0 : https://github.com/meltingice1337/HideNow/releases/download/1.0/HideNow.exe
+Version 1.0 : [Download](https://github.com/meltingice1337/HideNow/releases/download/1.0/HideNow.exe)
 
 Screenshots
 ---
