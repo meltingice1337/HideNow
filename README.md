@@ -28,7 +28,7 @@ See [CONTRIBUTING.md](/CONTRIBUTING.md)
 
 License
 ---
-See [LICENSE.md](/LICENSE.md)
+This software is licenesed under Attribution-NonCommercial-ShareAlike 4.0 International see https://creativecommons.org/licenses/by-nc-sa/4.0/
 
 Credits
 ---
