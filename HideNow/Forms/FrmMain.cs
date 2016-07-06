@@ -56,7 +56,6 @@ namespace HideNow.Forms
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MotionDetect.MotionDetected -= MotionDetect_MotionDetected;
             MotionDetect.Stop();
         }
 
