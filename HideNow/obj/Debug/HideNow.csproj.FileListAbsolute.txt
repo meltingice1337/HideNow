@@ -11,3 +11,12 @@ C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\AForge
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.mainForm.resources
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.Properties.Resources.resources
 C:\Users\MeltingICE\Google Drive\Programming\C#\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.Cache
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\bin\Debug\HideNow.exe
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\bin\Debug\HideNow.pdb
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.AForge.Video.DirectShow.Properties.Resources.resources
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.Forms.FrmMain.resources
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.Properties.Resources.resources
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.Cache
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.exe
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.pdb
