@@ -56,7 +56,8 @@ namespace HideNow.Forms
 
         private void FrmMain_FormClosing(object sender, FormClosingEventArgs e)
         {
-            MotionDetect.Stop();
+            if (MotionDetect != null)
+                MotionDetect.Stop();
         }
 
         private void ToggleMonitoring(bool status)

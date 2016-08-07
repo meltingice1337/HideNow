@@ -20,3 +20,4 @@ C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.Propertie
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.Cache
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.exe
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.pdb
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csprojResolveAssemblyReference.cache
