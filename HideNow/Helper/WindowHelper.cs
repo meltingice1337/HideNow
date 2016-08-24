@@ -6,11 +6,11 @@ using System.Text;
 using HideNow.Data;
 using HideNow.Utils;
 
-namespace HideNow.Core
+namespace HideNow.Helper
 {
     class WindowHelper
     {
-        public static Window[] GetWindows()
+        public static List<Window> GetWindows()
         {
             var result = new List<Window>();
             IntPtr shellWindow = NativeMethods.GetShellWindow();
@@ -32,19 +32,31 @@ namespace HideNow.Core
                 return true;
 
             }, 0);
-            return result.ToArray() ;
+            return result;
         }
 
         private static Bitmap GetIconBitmap(IntPtr hWnd)
         {
             uint pID;
             NativeMethods.GetWindowThreadProcessId(hWnd, out pID);
-           foreach (var process in Process.GetProcesses())
+            foreach (var process in Process.GetProcesses())
             {
                 if (process.Id == pID)
                     return Icon.ExtractAssociatedIcon(process.MainModule.FileName).ToBitmap();
             }
             return null;
+        }
+
+        public static string[] GetWindowsTitle(List<Window> windows)
+        {
+            var result = new List<string>();
+
+            foreach (var window in windows)
+            {
+                result.Add(window.Title);
+            }
+
+            return result.ToArray();
         }
     }
 }

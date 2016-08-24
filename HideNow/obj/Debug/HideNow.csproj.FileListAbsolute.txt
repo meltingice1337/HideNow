@@ -21,3 +21,4 @@ C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csproj.Ge
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.exe
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.pdb
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csprojResolveAssemblyReference.cache
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.Forms.FrmAddAction.resources

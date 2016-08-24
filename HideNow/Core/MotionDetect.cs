@@ -7,7 +7,7 @@ namespace HideNow.Core
 {
     class MotionDetect
     {
-        public double DetectionThreshold = 0.02;
+        public double DetectionThreshold = 0.05496;
         public delegate void MotionDetectedHandler();
         public event MotionDetectedHandler MotionDetected;
 

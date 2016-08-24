@@ -28,29 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnRefresh = new System.Windows.Forms.Button();
             this.lblWebcams = new System.Windows.Forms.Label();
             this.cboxWebcams = new System.Windows.Forms.ComboBox();
             this.btnStatus = new System.Windows.Forms.Button();
-            this.lstWindows = new HideNow.ListBoxEx();
+            this.btnRemoveAction = new HideNow.Controls.PictureButton();
+            this.btnAddAction = new HideNow.Controls.PictureButton();
+            this.lstActions = new xServer.Controls.AeroListView();
+            this.colActions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colValues = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.SuspendLayout();
-            // 
-            // btnRefresh
-            // 
-            this.btnRefresh.Location = new System.Drawing.Point(12, 345);
-            this.btnRefresh.Name = "btnRefresh";
-            this.btnRefresh.Size = new System.Drawing.Size(314, 23);
-            this.btnRefresh.TabIndex = 1;
-            this.btnRefresh.Text = "Refresh windowses";
-            this.btnRefresh.UseVisualStyleBackColor = true;
-            this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
             // 
             // lblWebcams
             // 
             this.lblWebcams.AutoSize = true;
-            this.lblWebcams.Location = new System.Drawing.Point(9, 371);
+            this.lblWebcams.Location = new System.Drawing.Point(9, 361);
             this.lblWebcams.Name = "lblWebcams";
-            this.lblWebcams.Size = new System.Drawing.Size(50, 13);
+            this.lblWebcams.Size = new System.Drawing.Size(55, 13);
             this.lblWebcams.TabIndex = 2;
             this.lblWebcams.Text = "Webcam";
             // 
@@ -58,42 +51,79 @@
             // 
             this.cboxWebcams.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cboxWebcams.FormattingEnabled = true;
-            this.cboxWebcams.Location = new System.Drawing.Point(12, 387);
+            this.cboxWebcams.Location = new System.Drawing.Point(12, 377);
             this.cboxWebcams.Name = "cboxWebcams";
-            this.cboxWebcams.Size = new System.Drawing.Size(314, 21);
+            this.cboxWebcams.Size = new System.Drawing.Size(366, 21);
             this.cboxWebcams.TabIndex = 3;
             // 
             // btnStatus
             // 
-            this.btnStatus.Location = new System.Drawing.Point(12, 414);
+            this.btnStatus.Location = new System.Drawing.Point(12, 404);
             this.btnStatus.Name = "btnStatus";
-            this.btnStatus.Size = new System.Drawing.Size(314, 23);
+            this.btnStatus.Size = new System.Drawing.Size(366, 23);
             this.btnStatus.TabIndex = 4;
             this.btnStatus.Text = "Activate monitoring";
             this.btnStatus.UseVisualStyleBackColor = true;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
-            // lstWindows
+            // btnRemoveAction
             // 
-            this.lstWindows.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawVariable;
-            this.lstWindows.FormattingEnabled = true;
-            this.lstWindows.ItemHeight = 40;
-            this.lstWindows.Location = new System.Drawing.Point(12, 12);
-            this.lstWindows.Name = "lstWindows";
-            this.lstWindows.Size = new System.Drawing.Size(317, 322);
-            this.lstWindows.TabIndex = 0;
-            this.lstWindows.SelectedIndexChanged += new System.EventHandler(this.lstWindows_SelectedIndexChanged);
+            this.btnRemoveAction.BackColor = System.Drawing.Color.White;
+            this.btnRemoveAction.BackgroundImage = global::HideNow.Properties.Resources.remove;
+            this.btnRemoveAction.Location = new System.Drawing.Point(358, 323);
+            this.btnRemoveAction.Name = "btnRemoveAction";
+            this.btnRemoveAction.PressedImage = null;
+            this.btnRemoveAction.Size = new System.Drawing.Size(25, 25);
+            this.btnRemoveAction.TabIndex = 7;
+            this.btnRemoveAction.Click += new System.EventHandler(this.btnRemoveAction_Click);
+            // 
+            // btnAddAction
+            // 
+            this.btnAddAction.BackColor = System.Drawing.Color.White;
+            this.btnAddAction.BackgroundImage = global::HideNow.Properties.Resources.add;
+            this.btnAddAction.Location = new System.Drawing.Point(358, 292);
+            this.btnAddAction.Name = "btnAddAction";
+            this.btnAddAction.PressedImage = null;
+            this.btnAddAction.Size = new System.Drawing.Size(25, 25);
+            this.btnAddAction.TabIndex = 6;
+            this.btnAddAction.Click += new System.EventHandler(this.pictureButton1_Click);
+            // 
+            // lstActions
+            // 
+            this.lstActions.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colActions,
+            this.colValues});
+            this.lstActions.FullRowSelect = true;
+            this.lstActions.Location = new System.Drawing.Point(0, 0);
+            this.lstActions.Name = "lstActions";
+            this.lstActions.Size = new System.Drawing.Size(395, 356);
+            this.lstActions.TabIndex = 5;
+            this.lstActions.UseCompatibleStateImageBehavior = false;
+            this.lstActions.View = System.Windows.Forms.View.Details;
+            this.lstActions.KeyUp += new System.Windows.Forms.KeyEventHandler(this.lstActions_KeyUp);
+            // 
+            // colActions
+            // 
+            this.colActions.Text = "Action";
+            this.colActions.Width = 160;
+            // 
+            // colValues
+            // 
+            this.colValues.Text = "Value";
+            this.colValues.Width = 230;
             // 
             // FrmMain
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(339, 454);
+            this.ClientSize = new System.Drawing.Size(395, 447);
+            this.Controls.Add(this.btnRemoveAction);
+            this.Controls.Add(this.btnAddAction);
+            this.Controls.Add(this.lstActions);
             this.Controls.Add(this.btnStatus);
             this.Controls.Add(this.cboxWebcams);
             this.Controls.Add(this.lblWebcams);
-            this.Controls.Add(this.btnRefresh);
-            this.Controls.Add(this.lstWindows);
+            this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMain";
             this.Text = "HideNow";
@@ -105,11 +135,13 @@
         }
 
         #endregion
-
-        private ListBoxEx lstWindows;
-        private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Label lblWebcams;
         private System.Windows.Forms.ComboBox cboxWebcams;
         private System.Windows.Forms.Button btnStatus;
+        private xServer.Controls.AeroListView lstActions;
+        private System.Windows.Forms.ColumnHeader colActions;
+        private System.Windows.Forms.ColumnHeader colValues;
+        private Controls.PictureButton btnAddAction;
+        private Controls.PictureButton btnRemoveAction;
     }
 }
