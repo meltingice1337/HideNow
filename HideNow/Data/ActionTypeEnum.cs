@@ -10,6 +10,7 @@ namespace HideNow.Data
         MinimizeWindow,
         RenameWindow,
         CloseWindow,
+        BlackScreen,
         OpenApplication,
         CloseApplication
     }

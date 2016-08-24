@@ -54,6 +54,7 @@
             "Show Window",
             "Minimize Window",
             "Rename Window",
+            "Black Screen",
             "Close Window",
             "Open Application",
             "Close Application"});
