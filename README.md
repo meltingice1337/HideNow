@@ -16,6 +16,7 @@ Features
   - Minimze Window
   - Rename Window
   - Close Window
+  - Black Screen
   - Open Application with arguments
   - Close application
 
