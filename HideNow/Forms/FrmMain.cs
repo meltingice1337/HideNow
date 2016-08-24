@@ -15,6 +15,8 @@ namespace HideNow.Forms
         {
             InitializeComponent();
 
+            btnRemoveAction.BackColor = btnAddAction.BackColor = System.Drawing.Color.Transparent;
+            btnRemoveAction.Parent =  btnAddAction.Parent = lstActions;
             IsActivated = false;
         }
 

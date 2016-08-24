@@ -432,6 +432,8 @@
     <Content Include="AForge\Math\Math %28mono%29.sln" />
     <Content Include="AForge\Math\Math.csproj" />
     <Content Include="AForge\Math\Math.sln" />
+    <None Include="Resources\remove_hover.png" />
+    <None Include="Resources\add_hover.png" />
     <None Include="Resources\remove.png" />
     <None Include="Resources\add.png" />
   </ItemGroup>

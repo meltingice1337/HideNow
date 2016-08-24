@@ -1,12 +1,13 @@
-﻿using System.Drawing;
+﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace HideNow.Controls
 {
-    public class PictureButton : Control
+    public class PictureButton : PictureBox
     {
-        Image backgroundImage, pressedImage;
-        bool pressed = false;
+        Image backgroundImage, pressedImage, hoverImage;
+        bool pressed = false, over = false;
         // Property for the background image to be drawn behind the button text. 
 #pragma warning disable CS0114 // Member hides inherited member; missing override keyword
         public Image BackgroundImage
@@ -36,6 +37,18 @@ namespace HideNow.Controls
             }
         }
 
+        public Image HoverImage
+        {
+            get
+            {
+                return this.hoverImage;
+            }
+            set
+            {
+                this.hoverImage = value;
+            }
+        }
+
         // When the mouse button is pressed, set the "pressed" flag to true  
         // and invalidate the form to cause a repaint.  The .NET Compact Framework  
         // sets the mouse capture automatically. 
@@ -55,6 +68,19 @@ namespace HideNow.Controls
             base.OnMouseUp(e);
         }
 
+        protected override void OnMouseEnter(EventArgs e)
+        {
+            this.over = true;
+            this.Invalidate();
+            base.OnMouseEnter(e);
+        }
+
+        protected override void OnMouseLeave(EventArgs e)
+        {
+            this.over = false;
+            this.Invalidate();
+            base.OnMouseLeave(e);   
+        }
         // Override the OnPaint method to draw the background image and the text. 
         protected override void OnPaint(PaintEventArgs e)
         {
@@ -62,6 +88,8 @@ namespace HideNow.Controls
 
             if (this.pressed && this.pressedImage != null)
                 e.Graphics.DrawImage(this.pressedImage, 0, 0);
+            else if (this.over && this.hoverImage != null)
+                e.Graphics.DrawImage(this.hoverImage, 0, 0, Width, Height);
             else if(this.backgroundImage != null)
                 e.Graphics.DrawImage(this.backgroundImage, 0, 0, Width, Height);
 

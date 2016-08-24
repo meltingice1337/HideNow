@@ -36,6 +36,8 @@
             this.lstActions = new xServer.Controls.AeroListView();
             this.colActions = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colValues = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveAction)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddAction)).BeginInit();
             this.SuspendLayout();
             // 
             // lblWebcams
@@ -68,24 +70,28 @@
             // 
             // btnRemoveAction
             // 
-            this.btnRemoveAction.BackColor = System.Drawing.Color.White;
+            this.btnRemoveAction.BackColor = System.Drawing.Color.Transparent;
             this.btnRemoveAction.BackgroundImage = global::HideNow.Properties.Resources.remove;
+            this.btnRemoveAction.HoverImage = global::HideNow.Properties.Resources.remove_hover;
             this.btnRemoveAction.Location = new System.Drawing.Point(358, 323);
             this.btnRemoveAction.Name = "btnRemoveAction";
             this.btnRemoveAction.PressedImage = null;
             this.btnRemoveAction.Size = new System.Drawing.Size(25, 25);
             this.btnRemoveAction.TabIndex = 7;
+            this.btnRemoveAction.TabStop = false;
             this.btnRemoveAction.Click += new System.EventHandler(this.btnRemoveAction_Click);
             // 
             // btnAddAction
             // 
-            this.btnAddAction.BackColor = System.Drawing.Color.White;
+            this.btnAddAction.BackColor = System.Drawing.Color.Transparent;
             this.btnAddAction.BackgroundImage = global::HideNow.Properties.Resources.add;
+            this.btnAddAction.HoverImage = global::HideNow.Properties.Resources.add_hover;
             this.btnAddAction.Location = new System.Drawing.Point(358, 292);
             this.btnAddAction.Name = "btnAddAction";
             this.btnAddAction.PressedImage = null;
             this.btnAddAction.Size = new System.Drawing.Size(25, 25);
             this.btnAddAction.TabIndex = 6;
+            this.btnAddAction.TabStop = false;
             this.btnAddAction.Click += new System.EventHandler(this.pictureButton1_Click);
             // 
             // lstActions
@@ -129,6 +135,8 @@
             this.Text = "HideNow";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.btnRemoveAction)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnAddAction)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
