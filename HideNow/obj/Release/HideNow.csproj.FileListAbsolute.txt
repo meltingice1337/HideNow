@@ -26,3 +26,4 @@ C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Propert
 C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csproj.GenerateResource.Cache
 C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.exe
 C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.pdb
+C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Forms.FrmAddAction.resources
