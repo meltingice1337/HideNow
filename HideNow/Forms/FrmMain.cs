@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using HideNow.Core;
 using HideNow.Data;
+using HideNow.Helper;
 
 namespace HideNow.Forms
 {
@@ -22,13 +23,12 @@ namespace HideNow.Forms
 
         private void MotionDetect_MotionDetected()
         {
+            lstActions.BeginInvoke(new MethodInvoker(() =>
+            {
+                foreach (ListViewItem lvi in lstActions.Items)
+                    ActionHandler.TakeAction((Action)lvi.Tag);
+            }));
 
-                lstActions.BeginInvoke(new MethodInvoker(() =>
-                {
-                    foreach(ListViewItem lvi in lstActions.Items)
-                        ActionHandler.TakeAction((Action)lvi.Tag);
-                }));
-               
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace HideNow.Forms
             string value = "";
             string type = action.ActionType.ToString();
 
-            if(action.ActionType == ActionTypeEnum.OpenApplication)
+            if (action.ActionType == ActionTypeEnum.OpenApplication)
             {
                 var data = (object[])action.ActionData;
                 if ((string)data[1] != "")
@@ -109,10 +109,14 @@ namespace HideNow.Forms
                 var data = (object[])action.ActionData;
                 value = ((string)data[0]);
             }
-            else if(action.ActionType == ActionTypeEnum.RenameWindow)
+            else if (action.ActionType == ActionTypeEnum.RenameWindow)
             {
                 var data = (object[])action.ActionData;
-                value = "New: " + (string)data[1] + " || " +((Window)data[0]).Title;
+                value = "New: " + (string)data[1] + " || " + ((Window)data[0]).Title;
+            }
+            else if (action.ActionType == ActionTypeEnum.BlackScreen)
+            {
+                value = "";
             }
             else
             {
@@ -136,5 +140,6 @@ namespace HideNow.Forms
             if(e.KeyCode == Keys.Delete)
                 btnRemoveAction_Click(null, null);
         }
+
     }
 }

@@ -23,6 +23,7 @@ namespace HideNow.Forms
         private void cboxActionType_SelectedIndexChanged(object sender, EventArgs e)
         {
             cboxActionValue.Items.Clear();
+            cboxActionValue.Enabled = lblActionValue.Enabled = true;
             txtActionOptions.Text = "";
 
             switch (cboxActionType.Text)
@@ -50,9 +51,12 @@ namespace HideNow.Forms
                 case "Rename Window":
                     ToggleControls(true);
                     lblActionOptions.Text = "Rename window to";
-
                     windows = WindowHelper.GetWindows();
                     cboxActionValue.Items.AddRange(WindowHelper.GetWindowsTitle(windows));
+                    break;
+                case "Black Screen":
+                    ToggleControls(false);
+                    cboxActionValue.Enabled = lblActionValue.Enabled = false;
                     break;
                 default:
                     ToggleControls(false);
@@ -60,7 +64,8 @@ namespace HideNow.Forms
                     cboxActionValue.Items.AddRange(WindowHelper.GetWindowsTitle(windows));
                     break;
             }
-            cboxActionValue.SelectedIndex = 0;
+            if(cboxActionValue.Items.Count > 0)
+                cboxActionValue.SelectedIndex = 0;
         }
 
         private void ToggleControls(bool enabled)
@@ -98,6 +103,12 @@ namespace HideNow.Forms
                     Action.ActionData = new object[]
                     {
                         cboxActionValue.Text
+                    };
+                    break;
+                case "Black Screen":
+                    MessageBox.Show(this, "Warning: Press F5 to exit the blackscreen", "HideNow", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    Action.ActionData = new object[]
+                    {
                     };
                     break;
                 default:

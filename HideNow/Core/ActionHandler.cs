@@ -100,6 +100,18 @@ namespace HideNow.Core
                     Log.WriteLog("ERROR: " + ex.ToString());
                 }
             }
+
+            else if (action.ActionType == ActionTypeEnum.BlackScreen)
+            {
+                    MiscHelper.TurnOffMonitor();
+                try
+                {
+                }
+                catch (Exception ex)
+                {
+                    Log.WriteLog("ERROR: " + ex.ToString());
+                }
+            }
         }
     }
 }
