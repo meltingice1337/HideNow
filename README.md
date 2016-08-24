@@ -26,7 +26,7 @@ Download Binaries
 
 Screenshots
 ---
-![alt text](http://i.imgur.com/mgcJsCU.jpg "HideNow")
+![alt text](http://i.imgur.com/v11YY8U.jpg "HideNow")
 
 Donations
 ---
