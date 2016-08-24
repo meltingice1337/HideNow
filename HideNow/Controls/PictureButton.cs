@@ -58,6 +58,8 @@ namespace HideNow.Controls
         // Override the OnPaint method to draw the background image and the text. 
         protected override void OnPaint(PaintEventArgs e)
         {
+            e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
             if (this.pressed && this.pressedImage != null)
                 e.Graphics.DrawImage(this.pressedImage, 0, 0);
             else if(this.backgroundImage != null)
