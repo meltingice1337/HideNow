@@ -361,14 +361,31 @@
     <Compile Include="AForge\Vision\Motion\SimpleBackgroundModelingDetector.cs" />
     <Compile Include="AForge\Vision\Motion\TwoFramesDifferenceDetector.cs" />
     <Compile Include="AForge\Vision\Tools.cs" />
+    <Compile Include="Controls\PictureButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Core\ActionHandler.cs" />
     <Compile Include="Core\WebcamHandler.cs" />
+    <Compile Include="Data\Action.cs" />
+    <Compile Include="Data\ActionTypeEnum.cs" />
+    <Compile Include="Forms\FrmAddAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAddAction.Designer.cs">
+      <DependentUpon>FrmAddAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Helper\MiscHelper.cs" />
+    <Compile Include="Helper\NativeMethodsHelper.cs" />
+    <Compile Include="Helper\PlatformHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utils\ListViewColumnSorter.cs" />
+    <Compile Include="Utils\Log.cs" />
     <Compile Include="Utils\NativeMethods.cs" />
     <Compile Include="Data\Window.cs" />
-    <Compile Include="Core\WindowHelper.cs" />
+    <Compile Include="Helper\WindowHelper.cs" />
     <Compile Include="Core\MotionDetect.cs" />
     <Compile Include="Core\WindowHide.cs" />
-    <Compile Include="Controls\ListBoxEx.cs">
+    <Compile Include="Controls\ListViewEX.cs">
       <SubType>Component</SubType>
     </Compile>
     <Compile Include="Forms\FrmMain.cs">
@@ -382,6 +399,9 @@
     <EmbeddedResource Include="AForge\Video.DirectShow\VideoCaptureDeviceForm.resx">
       <DependentUpon>VideoCaptureDeviceForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FrmAddAction.resx">
+      <DependentUpon>FrmAddAction.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\FrmMain.resx">
       <DependentUpon>FrmMain.cs</DependentUpon>
     </EmbeddedResource>
@@ -393,6 +413,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="AForge\Math\AForge.Math.snk" />
     <None Include="app.manifest" />
@@ -411,6 +432,8 @@
     <Content Include="AForge\Math\Math %28mono%29.sln" />
     <Content Include="AForge\Math\Math.csproj" />
     <Content Include="AForge\Math\Math.sln" />
+    <None Include="Resources\remove.png" />
+    <None Include="Resources\add.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="AForge\Vision\Properties\" />

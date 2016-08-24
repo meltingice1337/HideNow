@@ -9,6 +9,12 @@ namespace HideNow.Utils
     {
         public const int SW_MINIMIZE = 6;
 
+        [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
+        public extern static int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr SendMessage(IntPtr hWnd, uint msg, int wParam, int lParam);
+
         public delegate bool EnumWindowsProc(IntPtr hWnd, int lParam);
 
         [DllImport("USER32.DLL")]
@@ -34,5 +40,17 @@ namespace HideNow.Utils
 
         [DllImport("user32.dll", SetLastError = true, CharSet = CharSet.Auto)]
         public static extern bool SetWindowText(IntPtr hwnd, String lpString);
+
+        [DllImport("user32.dll")]
+        public static extern bool BringWindowToTop(IntPtr hWnd);
+
+        [DllImport("user32.dll")]
+        public static extern bool AttachThreadInput(uint idAttach, uint idAttachTo, bool fAttach);
+
+        [DllImport("user32.dll")]
+        public static extern uint GetWindowThreadProcessId(IntPtr hWnd, IntPtr lpdwProcessId);
+
+        [DllImport("user32.dll")]
+        public static extern IntPtr GetForegroundWindow();
     }
 }
