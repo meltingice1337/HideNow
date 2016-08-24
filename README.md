@@ -2,7 +2,7 @@
 
 **Free, Open-Source tool for performing actions using your webcam as a motion detector**
 
-HideNow is a tool that will automatically minimize and rename the window you select when your webcam detects any type of movement.
+HideNow is a tool that will perform a set of actoins like hiding a window or closing an application when your webcam detects any type of movement.
 
 Why would i need this ?
 ---
@@ -25,7 +25,7 @@ Download Binaries
 
 Screenshots
 ---
-![alt text](http://i.imgur.com/u42MnUu.png "HideNow")
+![alt text](http://i.imgur.com/mgcJsCU.jpg "HideNow")
 
 Donations
 ---
