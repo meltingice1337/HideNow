@@ -8,11 +8,6 @@ Why would i need this ?
 ---
 Let's say your mom thinks you are studying but in fact you are watching a movie on vlc. You don't want to get caught. You point your webcam in the direction your mom would come and start the app. When it detects any movement, the window you choose will hide itself. Nice huh ?
 
-Requirments
----
-- .NET Framework 2.0 (https://www.microsoft.com/en-us/download/details.aspx?id=1639)
-- Windows XP or higher
-
 Features
 ---
 - Execute action on motion detect
@@ -24,6 +19,11 @@ Features
   - Black Screen
   - Open Application with arguments
   - Close application
+
+Requirments
+---
+- .NET Framework 2.0 (https://www.microsoft.com/en-us/download/details.aspx?id=1639)
+- Windows XP or higher
 
 Download Binaries
 ----
