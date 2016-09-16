@@ -22,8 +22,8 @@ Features
 
 Requirments
 ---
-- .NET Framework 2.0 (https://www.microsoft.com/en-us/download/details.aspx?id=1639)
 - Windows XP or higher
+- .NET Framework 2.0 (https://www.microsoft.com/en-us/download/details.aspx?id=1639)
 
 Download Binaries
 ----
