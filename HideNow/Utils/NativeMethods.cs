@@ -8,10 +8,22 @@ namespace HideNow.Utils
     class NativeMethods
     {
         public const int SW_MINIMIZE = 6;
+        public const int SW_SHOWMINIMIZED = 2;
         public const int WM_SYSCOMMAND = 0x0112;
         public const int SC_MONITORPOWER = 0xF170;
         public const int MOINTOR_POWEROFF = 2;
         public const int VK_F5 = 0x74;
+
+        [StructLayout(LayoutKind.Sequential)]
+        public struct WINDOWPLACEMENT
+        {
+            public int length;
+            public int flags;
+            public int showCmd;
+            public System.Drawing.Point ptMinPosition;
+            public System.Drawing.Point ptMaxPosition;
+            public System.Drawing.Rectangle rcNormalPosition;
+        }
 
         [DllImport("uxtheme.dll", CharSet = CharSet.Unicode)]
         public extern static int SetWindowTheme(IntPtr hWnd, string pszSubAppName, string pszSubIdList);
@@ -72,5 +84,10 @@ namespace HideNow.Utils
 
         public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
 
+        [DllImport("user32.dll")]
+        public static extern bool SetWindowPlacement(IntPtr hWnd, WINDOWPLACEMENT lpwndpl);
+
+        [DllImport("user32.dll")]
+        public static extern bool GetWindowPlacement(IntPtr hWnd, out WINDOWPLACEMENT lpwndpl);
     }
 }

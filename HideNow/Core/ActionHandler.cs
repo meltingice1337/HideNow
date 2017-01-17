@@ -4,6 +4,7 @@ using System.Text;
 using HideNow.Data;
 using HideNow.Helper;
 using HideNow.Utils;
+using System.Runtime.InteropServices;
 using System.Diagnostics;
 
 namespace HideNow.Core
@@ -19,7 +20,7 @@ namespace HideNow.Core
                 try
                 {
                     var window = (Window)data[0];
-                    NativeMethods.ShowWindow(window.Handle, NativeMethods.SW_MINIMIZE);
+                    WindowHide.Minimize(window);
                 }
                 catch(Exception ex)
                 {
