@@ -15,7 +15,7 @@ namespace HideNow.Core
         {
             var data = (object[])action.ActionData;
 
-            if (action.ActionType == ActionTypeEnum.MinimizeWindow)
+            if (action.ActionType == ActionType.MinimizeWindow)
             {
                 try
                 {
@@ -28,7 +28,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if(action.ActionType == ActionTypeEnum.RenameWindow)
+            else if(action.ActionType == ActionType.RenameWindow)
             {
                 try
                 {
@@ -42,7 +42,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if(action.ActionType == ActionTypeEnum.ShowWindow)
+            else if(action.ActionType == ActionType.ShowWindow)
             {
                 try
                 {
@@ -55,7 +55,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if(action.ActionType == ActionTypeEnum.OpenApplication)
+            else if(action.ActionType == ActionType.OpenApplication)
             {
                 try
                 {
@@ -69,7 +69,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if (action.ActionType == ActionTypeEnum.CloseApplication)
+            else if (action.ActionType == ActionType.CloseApplication)
             {
                 try
                 {
@@ -87,7 +87,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if (action.ActionType == ActionTypeEnum.CloseWindow)
+            else if (action.ActionType == ActionType.CloseWindow)
             {
                 try
                 {
@@ -102,7 +102,7 @@ namespace HideNow.Core
                 }
             }
 
-            else if (action.ActionType == ActionTypeEnum.BlackScreen)
+            else if (action.ActionType == ActionType.BlackScreen)
             {
                     MiscHelper.TurnOffMonitor();
                 try

@@ -6,7 +6,7 @@ namespace HideNow.Data
 {
    public class Action
     {
-        public ActionTypeEnum ActionType { get; set; }
+        public ActionType ActionType { get; set; }
         public object ActionData { get; set; }
     }
 }

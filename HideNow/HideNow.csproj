@@ -367,7 +367,7 @@
     <Compile Include="Core\ActionHandler.cs" />
     <Compile Include="Core\WebcamHandler.cs" />
     <Compile Include="Data\Action.cs" />
-    <Compile Include="Data\ActionTypeEnum.cs" />
+    <Compile Include="Data\ActionType.cs" />
     <Compile Include="Forms\FrmAddAction.cs">
       <SubType>Form</SubType>
     </Compile>

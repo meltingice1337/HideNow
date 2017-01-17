@@ -4,7 +4,7 @@ using System.Text;
 
 namespace HideNow.Data
 {
-   public enum ActionTypeEnum
+   public enum ActionType
     {
         ShowWindow,
         MinimizeWindow,

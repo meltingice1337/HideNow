@@ -97,24 +97,24 @@ namespace HideNow.Forms
             string value = "";
             string type = action.ActionType.ToString();
 
-            if (action.ActionType == ActionTypeEnum.OpenApplication)
+            if (action.ActionType == ActionType.OpenApplication)
             {
                 var data = (object[])action.ActionData;
                 if ((string)data[1] != "")
                     value = "Args:" + (string)data[1] + " || ";
                 value += (string)data[0];
             }
-            else if (action.ActionType == ActionTypeEnum.CloseApplication)
+            else if (action.ActionType == ActionType.CloseApplication)
             {
                 var data = (object[])action.ActionData;
                 value = ((string)data[0]);
             }
-            else if (action.ActionType == ActionTypeEnum.RenameWindow)
+            else if (action.ActionType == ActionType.RenameWindow)
             {
                 var data = (object[])action.ActionData;
                 value = "New: " + (string)data[1] + " || " + ((Window)data[0]).Title;
             }
-            else if (action.ActionType == ActionTypeEnum.BlackScreen)
+            else if (action.ActionType == ActionType.BlackScreen)
             {
                 value = "";
             }

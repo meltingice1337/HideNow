@@ -76,7 +76,7 @@ namespace HideNow.Forms
         private void btnAddAction_Click(object sender, EventArgs e)
         {
             Action = new Data.Action();
-            Action.ActionType = (ActionTypeEnum)Enum.Parse(typeof(ActionTypeEnum), cboxActionType.Text.Replace(" ", ""));
+            Action.ActionType = (ActionType)Enum.Parse(typeof(ActionType), cboxActionType.Text.Replace(" ", ""));
 
             switch (cboxActionType.Text)
             {
