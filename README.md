@@ -35,7 +35,7 @@ Screenshots
 
 Donations
 ---
-BTC: 1Gmes6qfQY3HLx8bHcp34ooYRhGseJ2dYd
+BTC: 13aZLj8bGbXVP7oMeAzByXULwbjnW3VXDV
 
 PayPal: dariuscostolas@yahoo.com
 
