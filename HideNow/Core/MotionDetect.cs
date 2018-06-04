@@ -20,7 +20,7 @@ namespace HideNow.Core
             VideoCaptureDevices = new FilterInfoCollection(FilterCategory.VideoInputDevice);
             FinalVideo = new VideoCaptureDevice(VideoCaptureDevices[webcamID].MonikerString);
             var motionProcessor = new MotionAreaHighlighting();
-            Detector = new MotionDetector(new SimpleBackgroundModelingDetector(), motionProcessor);
+            Detector = new MotionDetector(new TwoFramesDifferenceDetector(), motionProcessor);
             FinalVideo.NewFrame += FinalVideo_NewFrame;
         }
 

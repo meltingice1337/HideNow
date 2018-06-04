@@ -26,3 +26,14 @@ C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csproj.
 C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.exe
 C:\Users\MeltingICE\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.pdb
 C:\Users\meltingice\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Forms.FrmAddAction.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\bin\Release\HideNow.exe
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\bin\Release\HideNow.pdb
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.AForge.Video.DirectShow.Properties.Resources.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Forms.FrmAddAction.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Forms.FrmMain.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.Properties.Resources.resources
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csproj.GenerateResource.Cache
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.csproj.CoreCompileInputs.cache
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.exe
+C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Release\HideNow.pdb
