@@ -13,6 +13,7 @@ namespace HideNow.Utils
         public const int SC_MONITORPOWER = 0xF170;
         public const int MOINTOR_POWEROFF = 2;
         public const int VK_F5 = 0x74;
+        public const int VK_F4 = 0X73;
 
         [StructLayout(LayoutKind.Sequential)]
         public struct WINDOWPLACEMENT
@@ -70,7 +71,7 @@ namespace HideNow.Utils
         public static extern IntPtr GetForegroundWindow();
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
-        public static extern IntPtr SetWindowsHookEx(int idHook, LowLevelKeyboardProc lpfn, IntPtr hMod, uint dwThreadId);
+        public static extern IntPtr SetWindowsHookEx(int idHook, LowLevelHoocProc lpfn, IntPtr hMod, uint dwThreadId);
 
         [DllImport("user32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         [return: MarshalAs(UnmanagedType.Bool)]
@@ -82,7 +83,7 @@ namespace HideNow.Utils
         [DllImport("kernel32.dll", CharSet = CharSet.Auto, SetLastError = true)]
         public static extern IntPtr GetModuleHandle(string lpModuleName);
 
-        public delegate IntPtr LowLevelKeyboardProc(int nCode, IntPtr wParam, IntPtr lParam);
+        public delegate IntPtr LowLevelHoocProc(int nCode, IntPtr wParam, IntPtr lParam);
 
         [DllImport("user32.dll")]
         public static extern bool SetWindowPlacement(IntPtr hWnd, WINDOWPLACEMENT lpwndpl);

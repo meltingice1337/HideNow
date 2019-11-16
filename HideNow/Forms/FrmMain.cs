@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using HideNow.Core;
 using HideNow.Data;
 using HideNow.Helper;
+using HideNow.Utils;
 
 namespace HideNow.Forms
 {
@@ -10,15 +11,25 @@ namespace HideNow.Forms
     {
         private Window Window;
         private MotionDetect MotionDetect;
+        private MouseHook MouseHook;
+        private KeyboardHook KeyboardHook;
+
         private bool IsActivated;
 
         public FrmMain()
         {
             InitializeComponent();
-
             btnRemoveAction.BackColor = btnAddAction.BackColor = System.Drawing.Color.Transparent;
             btnRemoveAction.Parent =  btnAddAction.Parent = lstActions;
+            KeyboardHook = new KeyboardHook();
+            KeyboardHook.KeyPressed += KeyboardHook_KeyPressed;
+            KeyboardHook.Start();
             IsActivated = false;
+        }
+
+        private void KeyboardHook_KeyPressed()
+        {
+            btnStatus.PerformClick();
         }
 
         private void MotionDetect_MotionDetected()
@@ -46,27 +57,58 @@ namespace HideNow.Forms
         {
             if (MotionDetect != null)
                 MotionDetect.Stop();
+            if(MouseHook != null)
+            {
+                MouseHook.MouseMoved -= MotionDetect_MotionDetected;
+                MouseHook.Stop();
+            }
+
+            if (KeyboardHook != null)
+            {
+                KeyboardHook.KeyPressed -= KeyboardHook_KeyPressed;
+                KeyboardHook.Stop();
+            }
         }
 
         private void ToggleMonitoring(bool status)
         {
             if(status)
             {
-                MotionDetect = new MotionDetect(cboxWebcams.SelectedIndex);
-                MotionDetect.MotionDetected += MotionDetect_MotionDetected;
-                MotionDetect.Start();
-
+                if (cboxMouseMovement.Checked)
+                {
+                    MouseHook = new MouseHook();
+                    MouseHook.MouseMoved += MotionDetect_MotionDetected;
+                    MouseHook.Start();
+                }
+                else
+                {
+                    MotionDetect = new MotionDetect(cboxWebcams.SelectedIndex);
+                    MotionDetect.MotionDetected += MotionDetect_MotionDetected;
+                    MotionDetect.Start();
+                }
                 IsActivated = true;
+                cboxMouseMovement.Enabled = false;
                 cboxWebcams.Enabled = false;
                 btnStatus.Text = "Deactivate monitoring";
+                this.Text = "HideNow - Active";
             }
             else
             {
                 IsActivated = false;
                 cboxWebcams.Enabled = true;
-                MotionDetect.MotionDetected -= MotionDetect_MotionDetected;
-                MotionDetect.Stop();
+                cboxMouseMovement.Enabled = true;
+                if (cboxMouseMovement.Checked)
+                {
+                    MouseHook.MouseMoved -= MotionDetect_MotionDetected;
+                    MouseHook.Stop();
+                }
+                else
+                {
+                    MotionDetect.MotionDetected -= MotionDetect_MotionDetected;
+                    MotionDetect.Stop();
+                }
                 btnStatus.Text = "Activate monitoring";
+                this.Text = "HideNow - Inactive";
             }
         }
 
@@ -141,5 +183,9 @@ namespace HideNow.Forms
                 btnRemoveAction_Click(null, null);
         }
 
+        private void cboxMouseMovement_CheckedChanged(object sender, EventArgs e)
+        {
+            cboxWebcams.Enabled = !cboxMouseMovement.Checked;
+        }
     }
 }

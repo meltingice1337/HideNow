@@ -33,3 +33,15 @@ C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csproj.Genera
 C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.csproj.CoreCompileInputs.cache
 C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.exe
 C:\Users\Darius\Documents\GitHub\HideNow\HideNow\obj\Debug\HideNow.pdb
+C:\Users\Darius\workspace\HideNow\HideNow\bin\Debug\HideNow.exe
+C:\Users\Darius\workspace\HideNow\HideNow\bin\Debug\HideNow.pdb
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csprojAssemblyReference.cache
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.AForge.Video.DirectShow.Properties.Resources.resources
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\AForge.Video.DirectShow.VideoCaptureDeviceForm.resources
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.Forms.FrmAddAction.resources
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.Forms.FrmMain.resources
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.Properties.Resources.resources
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResource.cache
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csproj.CoreCompileInputs.cache
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.exe
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.pdb

@@ -5,26 +5,41 @@ using System.Diagnostics;
 
 namespace HideNow.Utils
 {
-    class KeyboardHook
+    class MouseHook
     {
-        private const int WH_KEYBOARD_LL = 13;
-        private const int WM_KEYDOWN = 0x0100;
+        [StructLayout(LayoutKind.Sequential)]
+        private struct POINT
+        {
+            public int x;
+            public int y;
+        }
+
+
+        [StructLayout(LayoutKind.Sequential)]
+        private struct MSLLHOOKSTRUCT
+        {
+            public POINT pt;
+            public uint mouseData;
+            public uint flags;
+            public uint time;
+            public IntPtr dwExtraInfo;
+        }
+
+        private const int WH_MOUSE_LL = 14;
+        private const int WM_MOUSEMOVE = 0x0200;
         private NativeMethods.LowLevelHoocProc _proc;
         private IntPtr _hookID = IntPtr.Zero;
 
         public bool IsStarted = false;
 
-        public delegate void KeyPressedHandler();
-        public static event KeyPressedHandler KeyPressed;
+        public delegate void MouseMovedHandler();
+        public event MouseMovedHandler MouseMoved;
 
         private IntPtr HookCallback( int nCode, IntPtr wParam, IntPtr lParam)
         {
-            if (nCode >= 0 && wParam == (IntPtr)WM_KEYDOWN)
+            if (nCode >= 0 && wParam == (IntPtr)WM_MOUSEMOVE)
             {
-                int vkCode = Marshal.ReadInt32(lParam);
-
-                if (vkCode == NativeMethods.VK_F4)
-                    KeyPressed?.Invoke();
+                MouseMoved?.Invoke();
             }
             return NativeMethods.CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
@@ -34,11 +49,11 @@ namespace HideNow.Utils
             using (Process curProcess = Process.GetCurrentProcess())
             using (ProcessModule curModule = curProcess.MainModule)
             {
-                return NativeMethods.SetWindowsHookEx(WH_KEYBOARD_LL, proc, NativeMethods.GetModuleHandle(curModule.ModuleName), 0);
+                return NativeMethods.SetWindowsHookEx(WH_MOUSE_LL, proc, NativeMethods.GetModuleHandle(curModule.ModuleName), 0);
             }
         }
 
-        public KeyboardHook()
+        public MouseHook()
         {
             _proc = HookCallback;
         }

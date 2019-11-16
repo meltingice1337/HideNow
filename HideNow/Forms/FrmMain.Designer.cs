@@ -31,6 +31,7 @@
             this.lblWebcams = new System.Windows.Forms.Label();
             this.cboxWebcams = new System.Windows.Forms.ComboBox();
             this.btnStatus = new System.Windows.Forms.Button();
+            this.cboxMouseMovement = new System.Windows.Forms.CheckBox();
             this.btnRemoveAction = new HideNow.Controls.PictureButton();
             this.btnAddAction = new HideNow.Controls.PictureButton();
             this.lstActions = new xServer.Controls.AeroListView();
@@ -68,6 +69,17 @@
             this.btnStatus.UseVisualStyleBackColor = true;
             this.btnStatus.Click += new System.EventHandler(this.btnStatus_Click);
             // 
+            // cboxMouseMovement
+            // 
+            this.cboxMouseMovement.AutoSize = true;
+            this.cboxMouseMovement.Location = new System.Drawing.Point(84, 359);
+            this.cboxMouseMovement.Name = "cboxMouseMovement";
+            this.cboxMouseMovement.Size = new System.Drawing.Size(154, 17);
+            this.cboxMouseMovement.TabIndex = 8;
+            this.cboxMouseMovement.Text = "Use mouse movement";
+            this.cboxMouseMovement.UseVisualStyleBackColor = true;
+            this.cboxMouseMovement.CheckedChanged += new System.EventHandler(this.cboxMouseMovement_CheckedChanged);
+            // 
             // btnRemoveAction
             // 
             this.btnRemoveAction.BackColor = System.Drawing.Color.Transparent;
@@ -100,6 +112,7 @@
             this.colActions,
             this.colValues});
             this.lstActions.FullRowSelect = true;
+            this.lstActions.HideSelection = false;
             this.lstActions.Location = new System.Drawing.Point(0, 0);
             this.lstActions.Name = "lstActions";
             this.lstActions.Size = new System.Drawing.Size(395, 356);
@@ -123,6 +136,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(395, 447);
+            this.Controls.Add(this.cboxMouseMovement);
             this.Controls.Add(this.btnRemoveAction);
             this.Controls.Add(this.btnAddAction);
             this.Controls.Add(this.lstActions);
@@ -132,7 +146,7 @@
             this.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "FrmMain";
-            this.Text = "HideNow";
+            this.Text = "HideNow - Inactive";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmMain_FormClosing);
             this.Load += new System.EventHandler(this.FrmMain_Load);
             ((System.ComponentModel.ISupportInitialize)(this.btnRemoveAction)).EndInit();
@@ -151,5 +165,6 @@
         private System.Windows.Forms.ColumnHeader colValues;
         private Controls.PictureButton btnAddAction;
         private Controls.PictureButton btnRemoveAction;
+        private System.Windows.Forms.CheckBox cboxMouseMovement;
     }
 }
