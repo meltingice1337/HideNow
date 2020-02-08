@@ -6,6 +6,7 @@ using HideNow.Helper;
 using HideNow.Utils;
 using System.Runtime.InteropServices;
 using System.Diagnostics;
+using Action = HideNow.Data.Action;
 
 namespace HideNow.Core
 {

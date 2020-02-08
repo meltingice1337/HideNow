@@ -14,7 +14,6 @@ namespace HideNow.Utils
             public int y;
         }
 
-
         [StructLayout(LayoutKind.Sequential)]
         private struct MSLLHOOKSTRUCT
         {
@@ -35,11 +34,23 @@ namespace HideNow.Utils
         public delegate void MouseMovedHandler();
         public event MouseMovedHandler MouseMoved;
 
+        private bool watchForMouseButtonOnly;
+
         private IntPtr HookCallback( int nCode, IntPtr wParam, IntPtr lParam)
         {
-            if (nCode >= 0 && wParam == (IntPtr)WM_MOUSEMOVE)
+            if (watchForMouseButtonOnly)
             {
-                MouseMoved?.Invoke();
+                if(nCode >= 0 && wParam == (IntPtr)0x20b)
+                {
+                    MouseMoved?.Invoke();
+                }
+            }
+            else
+            {
+                if (nCode >= 0 && wParam == (IntPtr)WM_MOUSEMOVE)
+                {
+                    MouseMoved?.Invoke();
+                }
             }
             return NativeMethods.CallNextHookEx(_hookID, nCode, wParam, lParam);
         }
@@ -53,8 +64,9 @@ namespace HideNow.Utils
             }
         }
 
-        public MouseHook()
+        public MouseHook(bool watchForMouseButtonOnly = false)
         {
+            this.watchForMouseButtonOnly = watchForMouseButtonOnly;
             _proc = HookCallback;
         }
 

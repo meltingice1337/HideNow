@@ -48,3 +48,4 @@ C:\Users\Darius\workspace\HideNow\HideNow\obj\Release\HideNow.csproj.GenerateRes
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Release\HideNow.csproj.CoreCompileInputs.cache
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Release\HideNow.exe
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Release\HideNow.pdb
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Release\HideNow.csprojAssemblyReference.cache

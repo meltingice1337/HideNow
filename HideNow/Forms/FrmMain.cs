@@ -1,9 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Windows.Forms;
 using HideNow.Core;
 using HideNow.Data;
 using HideNow.Helper;
 using HideNow.Utils;
+using NAudio.Wave;
+using Action = HideNow.Data.Action;
 
 namespace HideNow.Forms
 {
@@ -11,7 +14,9 @@ namespace HideNow.Forms
     {
         private Window Window;
         private MotionDetect MotionDetect;
+        private AudioDetect AudioDetect;
         private MouseHook MouseHook;
+        private MouseHook MouseButtonHook;
         private KeyboardHook KeyboardHook;
 
         private bool IsActivated;
@@ -24,7 +29,31 @@ namespace HideNow.Forms
             KeyboardHook = new KeyboardHook();
             KeyboardHook.KeyPressed += KeyboardHook_KeyPressed;
             KeyboardHook.Start();
+            MouseButtonHook = new MouseHook(true);
+            MouseButtonHook.MouseMoved += MouseButtonHook_MouseMoved;
+            MouseButtonHook.Start();
+            AudioDetect = new AudioDetect(0);
+            AudioDetect.AudioDetected += AudioDetect_AudioDetected;
+            AudioDetect.Start();
             IsActivated = false;
+        }
+
+        private void AudioDetect_AudioDetected()
+        {
+            lstActions.BeginInvoke(new MethodInvoker(() =>
+            {
+                foreach (ListViewItem lvi in lstActions.Items)
+                    ActionHandler.TakeAction((Action)lvi.Tag);
+            }));
+        }
+
+        private void MouseButtonHook_MouseMoved()
+        {
+            lstActions.BeginInvoke(new MethodInvoker(() =>
+            {
+                foreach (ListViewItem lvi in lstActions.Items)
+                    ActionHandler.TakeAction((Action)lvi.Tag);
+            }));
         }
 
         private void KeyboardHook_KeyPressed()
@@ -67,6 +96,10 @@ namespace HideNow.Forms
             {
                 KeyboardHook.KeyPressed -= KeyboardHook_KeyPressed;
                 KeyboardHook.Stop();
+            }
+            if(AudioDetect != null)
+            {
+                AudioDetect.Stop();
             }
         }
 
@@ -134,7 +167,7 @@ namespace HideNow.Forms
             }
         }
         
-        private void AddActionToList(Action action)
+        private void AddActionToList(Data.Action action)
         {
             string value = "";
             string type = action.ActionType.ToString();

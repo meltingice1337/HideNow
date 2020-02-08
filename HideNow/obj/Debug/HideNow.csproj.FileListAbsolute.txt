@@ -45,3 +45,7 @@ C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csproj.GenerateResou
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csproj.CoreCompileInputs.cache
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.exe
 C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.pdb
+C:\Users\Darius\workspace\HideNow\HideNow\bin\Debug\HideNow.exe.config
+C:\Users\Darius\workspace\HideNow\HideNow\bin\Debug\NAudio.dll
+C:\Users\Darius\workspace\HideNow\HideNow\bin\Debug\NAudio.xml
+C:\Users\Darius\workspace\HideNow\HideNow\obj\Debug\HideNow.csproj.CopyComplete

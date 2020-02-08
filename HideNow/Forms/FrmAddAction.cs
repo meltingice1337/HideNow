@@ -7,6 +7,7 @@ using System.Text;
 using System.Windows.Forms;
 using HideNow.Helper;
 using HideNow.Data;
+using Action = HideNow.Data.Action;
 
 namespace HideNow.Forms
 {
